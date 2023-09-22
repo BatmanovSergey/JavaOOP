@@ -6,6 +6,7 @@ public class Water extends Component {
     }
 
     public Water(String weight) {
-        this("Вода", 10, weight);
+
+        this("Вода", 5, weight);
     }
 }

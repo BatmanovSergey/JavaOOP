@@ -15,8 +15,6 @@ public class Component {
         this.weight = weight;
     }
 
-
-
     public int getPower() {
         return power;
     }
@@ -30,4 +28,11 @@ public class Component {
                 '}';
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setPower(int power) {
+        this.power = power;
+    }
 }

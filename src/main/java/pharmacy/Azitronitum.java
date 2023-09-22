@@ -6,7 +6,7 @@ public class Azitronitum extends Component{
     }
 
     public Azitronitum (String weight) {
-        this("Азитромит", 15, weight);
+        this("Азитромит", 10, weight);
     }
 
 
