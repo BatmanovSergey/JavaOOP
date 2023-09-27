@@ -43,21 +43,21 @@ public class Main {
 
 //        System.out.println(pharmacyList);
 
-        System.out.println("---------");
-
-        for (Pharmacy pharmacy : pharmacyList) {
-            System.out.printf("Лекарство - имеет силу: %d единиц и название: %s%n",
-                    pharmacy.getFullPower(), pharmacy.getPharmacyName() );
-        }
-        System.out.println("---------");
-
-        Collections.sort(pharmacyList);
-
-        for (Pharmacy pharmacy : pharmacyList) {
-            System.out.printf("Лекарство - имеет силу: %d единиц и название: %s%n",
-                    pharmacy.getFullPower(), pharmacy.getPharmacyName() );
-        }
-        System.out.println("---------");
+//        System.out.println("---------");
+//
+//        for (Pharmacy pharmacy : pharmacyList) {
+//            System.out.printf("Лекарство - имеет силу: %d единиц и название: %s%n",
+//                    pharmacy.getFullPower(), pharmacy.getPharmacyName() );
+//        }
+//        System.out.println("---------");
+//
+//        Collections.sort(pharmacyList);
+//
+//        for (Pharmacy pharmacy : pharmacyList) {
+//            System.out.printf("Лекарство - имеет силу: %d единиц и название: %s%n",
+//                    pharmacy.getFullPower(), pharmacy.getPharmacyName() );
+//        }
+//        System.out.println("---------");
 
 //        while (((Iterator<Component>) catPharmacy).hasNext()) {
 //            System.out.println(((Iterator<Component>) catPharmacy).next());
@@ -66,13 +66,13 @@ public class Main {
         for (Component component : catPharmacy) {
             System.out.println(component);
         }
-
-        Set<Pharmacy> result = new HashSet<>();
-        for (Pharmacy p : pharmacyList) {
-            result.add(p);
-        }
-        System.out.printf("Количество уникальных лекарств = %d%n", result.size());
-        System.out.println("---------");
+//
+//        Set<Pharmacy> result = new HashSet<>();
+//        for (Pharmacy p : pharmacyList) {
+//            result.add(p);
+//        }
+//        System.out.printf("Количество уникальных лекарств = %d%n", result.size());
+//        System.out.println("---------");
 
     }
 }

@@ -8,8 +8,8 @@ public class PharmacyIterator implements Iterator<Component> {
     private List<Component> components;
     private int index;
 
-    public PharmacyIterator() {
-        this.components = new ArrayList<>();
+    public PharmacyIterator(List<Component> components) {
+        this.components = components;
         this.index = 0;
     }
     @Override

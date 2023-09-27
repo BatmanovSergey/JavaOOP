@@ -75,23 +75,24 @@ public class Pharmacy implements Iterable<Component>, Comparable<Pharmacy> {
 
     @Override
     public Iterator<Component> iterator() {
-        return new PharmacyIterator();
+
+        return new PharmacyIterator(components);
     }
 
-////    @Override
-////    public Iterator<Component> iterator() {
-////        return new Iterator<Component>() {
-////            @Override
-////            public boolean hasNext() {
-////                return index < components.size();
-////            }
-////
-////            @Override
-////            public Component next() {
-////                return components.get(index++);
-////            }
-////        };
-////    }
+//    @Override
+//    public Iterator<Component> iterator() {
+//        return new Iterator<Component>() {
+//            @Override
+//            public boolean hasNext() {
+//                return index < components.size();
+//            }
+//
+//            @Override
+//            public Component next() {
+//                return components.get(index++);
+//            }
+//        };
+//    }
 //
 //    for (Iterator<Component> iterator = pharmacy.iterator(); iterator.hasNext(); {
 //        Component c = iterator.next();
