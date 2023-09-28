@@ -10,12 +10,15 @@ public class Main {
         my.addLast(7);
         my.addLast(11);
 
+        System.out.println("---------");
+
         System.out.printf("LinkedList имеет размер:  %d%n", my.size());
-        System.out.printf("Искомый элемент в LinkedList: %d%n", my.get(2));
+        System.out.printf("Искомый элемент в LinkedList имеет значение: %d%n", my.get(2));
+
+        System.out.println("---------");
 
         for (Integer node : my) {
             System.out.println(node);
         }
-
     }
 }

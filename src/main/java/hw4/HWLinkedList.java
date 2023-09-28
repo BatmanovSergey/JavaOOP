@@ -7,41 +7,69 @@ public class HWLinkedList<T> implements HWList<T> {
     private Node<T> lastNode;
     private int size;
 
-//    public HWLinkedList<T> list;
+//// Версия из ютьюба
+//
+//    public HWLinkedList() {
+//        lastNode = new Node<>(null, firstNode, null);
+//        firstNode = new Node<>(null, null, lastNode);
+//        size = 0;
+//    }
+//
+//    @Override
+//    public void addLast(T t) {
+//        Node<T> prev = lastNode;
+//        prev.setCurrentElement(t);
+//        lastNode = new Node<>(null, prev, null);
+//        prev.setNextNode(lastNode);
+//        size++;
+//    }
+//
+//    @Override
+//    public T get(int index) {
+//        Node<T> goal = firstNode.getNextNode();
+//        for (int i = 0; i < index; i++) {
+//            goal = getNextNodeNew(goal);
+//        }
+//        return goal.getCurrentElement();
+//    }
+//
+//    private Node<T> getNextNodeNew(Node<T> current) {
+//        return current.getNextNode();
+//    }
+//
+//// Версия из ютьюба
 
-
+// Версия от Алеси
     public HWLinkedList() {
-        lastNode = new Node<>(null, firstNode, null);
         firstNode = new Node<>(null, null, lastNode);
+        lastNode = new Node<>(null, firstNode, null);
         size = 0;
     }
 
     @Override
     public void addLast(T t) {
-        Node<T> prev = lastNode;
-        prev.setCurrentElement(t);
-        lastNode = new Node<>(null, prev, null);
-        prev.setNextElement(lastNode);
+        Node<T> prevNode = lastNode.getPrevNode();
+        Node<T> addNode = new Node<>(t, lastNode.getPrevNode(), prevNode.getNextNode());
+//        Node<T> addNode = new Node<>(t, prevNode, lastNode); тоже самое что и строка выше
+        prevNode.setNextNode(addNode);
+        lastNode.setPrevNode(addNode);
         size++;
     }
 
     @Override
     public T get(int index) {
-        Node<T> goal = firstNode.getNextElement();
+        Node<T> goal = firstNode.getNextNode();
         for (int i = 0; i < index; i++) {
-            goal = getNextNode(goal);
+            goal = goal.getNextNode();
         }
         return goal.getCurrentElement();
     }
 
-    private Node<T> getNextNode(Node<T> current) {
+// Версия от Алеси
 
-        return current.getNextElement();
-    }
 
     @Override
     public int size() {
-
         return size;
     }
 

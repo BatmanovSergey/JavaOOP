@@ -2,13 +2,13 @@ package hw4;
 
 public class Node <T> {
     private T currentElement;
-    private Node <T> prevElement;
-    private Node <T> nextElement;
+    private Node <T> prevNode;
+    private Node <T> nextNode;
 
-    public Node(T currentElement, Node<T> prevElement, Node<T> nextElement) {
+    public Node(T currentElement, Node<T> prevNode, Node<T> nextNode) {
         this.currentElement = currentElement;
-        this.prevElement = prevElement;
-        this.nextElement = nextElement;
+        this.prevNode = prevNode;
+        this.nextNode = nextNode;
 
     }
 
@@ -16,20 +16,20 @@ public class Node <T> {
         return currentElement;
     }
 
-    public Node<T> getNextElement() {
-        return nextElement;
+    public Node<T> getNextNode() {
+        return nextNode;
     }
 
-    public Node<T> getPrevElement() {
-        return prevElement;
+    public Node<T> getPrevNode() {
+        return prevNode;
     }
 
-    public void setNextElement(Node<T> nextElement) {
-        this.nextElement = nextElement;
+    public void setNextNode(Node<T> nextElement) {
+        this.nextNode = nextElement;
     }
 
-    public void setPrevElement(Node<T> prevElement) {
-        this.prevElement = prevElement;
+    public void setPrevNode(Node<T> prevElement) {
+        this.prevNode = prevElement;
     }
 
     public void setCurrentElement(T currentElement) {
